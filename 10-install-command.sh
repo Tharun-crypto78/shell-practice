@@ -13,6 +13,8 @@ fi
 
 dnf list installed mysql
 
+# checks if the package is already installed or not --> if installed $? is 0, then
+# if not installed $? is not 0. Expression is True
 if [ $? -ne 0 ]
 then
     echo "MySQL is not installed..... is about to install it"
