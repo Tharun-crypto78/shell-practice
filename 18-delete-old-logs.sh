@@ -44,4 +44,3 @@ done <<< $FILES_TO_DELETE # < means input and > means output. for reading single
 
 echo "Script executed successfully"
 
-print_time
