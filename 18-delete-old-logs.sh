@@ -8,6 +8,7 @@ Y="\e[33m"
 N="\e[0m"
 # creating a variable here
 LOGS_FOLDER="/var/log/shellscript-logs"
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR=/home/ec2-user/app-logs
 
@@ -42,3 +43,5 @@ do
 done <<< $FILES_TO_DELETE # < means input and > means output. for reading single < is enough, for string we use multiple <<<
 
 echo "Script executed successfully"
+
+print_time
