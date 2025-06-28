@@ -1,6 +1,5 @@
 #!/bin/bash
 
-START_TIME=$(date +%s)
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
@@ -11,6 +10,8 @@ LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR=/home/ec2-user/app-logs
+
+mkdir -p $LOGS_FOLDER
 
 if [ $USERID -ne 0 ]
 then
@@ -30,7 +31,7 @@ VALIDATE(){
         exit 1
     fi
 }
-mkdir -p $LOGS_FOLDER
+
 
 echo "Script started executing at $(date)" | tee -a $LOG_FILE
 
