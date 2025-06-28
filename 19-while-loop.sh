@@ -11,4 +11,4 @@
 while IFS= read -r line #read line by line
 do
     echo $line # prints each line ones it is read
-done < 18-delete-old-logs.sh
+done < 17-set.sh
