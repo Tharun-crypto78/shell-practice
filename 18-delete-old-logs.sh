@@ -41,7 +41,7 @@ while IFS= read -r filepath
 do
     echo "Deleting file: $filepath" | tee -a $LOG_FILE
     rm -rf $filepath
-done <<< $FILES_TO_DELETE # < means input and > means output. for reading single < is enough, for string we use multiple <<<
+done <<< $FILES_TO_DELETE # '<' means input and '>' means output. for reading single < is enough, for string we use multiple <<<
 
 echo "Script executed successfully"
 
