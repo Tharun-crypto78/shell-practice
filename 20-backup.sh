@@ -58,3 +58,12 @@ then
     echo -e "$R Destinatin Directory $DEST_DIR does not exist. Please check $N"
     exit 1
 fi
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+if [ ! -z $FILES ]
+then
+    echo "Files found"
+else
+    echo "No files found older than 14 days ... $Y SKIPPING $N"
+fi
