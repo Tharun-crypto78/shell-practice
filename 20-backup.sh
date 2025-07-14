@@ -28,10 +28,10 @@ VALIDATE(){
 check_root(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R ERROR:: please run this script with root access $N" | tee -a $LOG_FILE
+        echo -e "$R ERROR:: please run this script with root access $N" 
         exit 1 #if you want to manually exit then give other than 0, upto 127
     else
-        echo "You are running with the root access" | tee -a $LOG_FILE
+        echo "You are running with the root access" 
     fi
 }
 
